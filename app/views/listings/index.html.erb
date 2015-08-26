@@ -5,6 +5,7 @@
     <div class="col-md-3">
       <div class="thumbnail">
         <div class="caption">
+          <%= image_tag listing.image.url %>
           <h3><%= listing.name %></h3><br>
           <p><%= number_to_currency(listing.price) %></p><br>
           <p><%= link_to 'Show', listing, class:"btn btn-link" %></p><br>
