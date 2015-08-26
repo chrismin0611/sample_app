@@ -16,6 +16,8 @@ gem 'figaro'
 gem 'arel'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'bcrypt-ruby', '~>3.0.0'
+gem 'content-type'
+
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
