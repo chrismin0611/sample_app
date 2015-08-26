@@ -9,7 +9,7 @@ class Listing < ActiveRecord::Base
 		:storage => :dropbox,
 		:dropbox_credentials => Rails.root.join("config/dropbox.yml"),
 		:path => ":style/:id_:filename",
-	validates_attachment_content_type :image, ["image/jpg", "image/jpeg", "image/png", "image/gif"], message: "Only jpeg, png, and gif images types are allowed"
+		validates_attachment_content_type :image, ["image/jpg", "image/jpeg", "image/png", "image/gif"], message: "Only jpeg, png, and gif images types are allowed"
 	end
 end
 
