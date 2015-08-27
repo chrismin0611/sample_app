@@ -17,6 +17,7 @@ gem 'arel'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'bcrypt-ruby', '~>3.0.0'
 gem 'content-type'
+gem 'devise'
 
 group :production do
 	gem 'pg'
