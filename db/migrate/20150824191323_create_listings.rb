@@ -4,7 +4,7 @@ class CreateListings < ActiveRecord::Migration
       t.string :name
       t.text :descrption
       t.decimal :price
-
+ 
       t.timestamps null: false
     end
   end
