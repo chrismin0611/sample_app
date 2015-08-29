@@ -14,4 +14,7 @@ class Listing < ActiveRecord::Base
 		validates_attachment :image, :content_type => {:content_type =>["image/jpg", "image/jpeg", "image/png"]}, :message => 'file type is not allowed (only jpeg/png/gif images)'
 		
 	end
+
+	validates :name, :description, :price, presence: true
+	validates :price, numericality: { greater_than: 0}
 end

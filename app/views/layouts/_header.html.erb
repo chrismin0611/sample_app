@@ -16,15 +16,16 @@
       <ul class="nav navbar-nav">
       <Li><%= link_to "About", pages_about_path %></li>
       <li><a href="/pages/contact">Contact</a></li>
-
-      <Li><%= link_to "Sign Up", new_user_registration_path %></li>
-      <Li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
-      <Li><%= link_to "Sign In", new_user_session_path %></li>
-      <Li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-
       </ul>
-  
-        </li>
+      
+      <ul class= "nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <Li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          <Li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
+        <% else %>
+          <Li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <Li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
