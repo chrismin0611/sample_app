@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150829003657) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "name"
-    t.text     "descrption"
+    t.text     "description"
     t.decimal  "price"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
